@@ -1,4 +1,4 @@
-<!-- Template by Marcos André -->
+<!-- Template by carlos uchoa -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,7 +19,7 @@
     </head>
     <body>
 
-        <!-- Init of Template - Marcos André -->
+        <!-- Init of Template - carlos uchoa -->
 
         <div class="d-flex">
             <nav class="sidebar">
@@ -131,9 +131,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-        <!-- End of Template - Marcos André -->
+        <!-- End of Template - carlos uchoa -->
 
     </body>
 </html>
 
-<!-- Template by Marcos André -->
+<!-- Template by carlos uchoa -->

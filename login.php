@@ -44,9 +44,9 @@
 				</button><br><br>
 			</form>
 
-			<!-- Copyright Marcos André -->
+			<!-- Copyright carlos uchoa -->
 
-			<p id="credits">&copy; Marcos André - <?php echo date("Y"); ?> - Todos os direitos Reservados</p>
+			<p id="credits">&copy; Carlos Uchoa - <?php echo date("Y"); ?> - Todos os direitos Reservados</p>
 		
 
 	</div>
