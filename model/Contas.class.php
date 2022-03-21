@@ -24,6 +24,10 @@ class Contas extends Conexao {
         }
 
     }
+    //metodo para fazer logout
+    public function logout(){
+        unset($_SESSION['login']);
+    }
 }
 
 
