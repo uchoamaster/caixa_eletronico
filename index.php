@@ -110,7 +110,7 @@ $contas = new Contas();
 										<!-- Formulario para Transação -->
 										<td>
 
-						<form method="POST" action="">
+						<form method="POST" action="view/add_transacao.php">
 
 							<!-- Botão para Transação -->
 
