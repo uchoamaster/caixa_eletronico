@@ -25,7 +25,7 @@
 		<h1> Caixa Eletrônico - Login</h1>
 
 		<!-- Form for Login -->
-			<form method="POST" class="log" action="">
+			<form method="POST" class="log" action="controller/loginController.php">
 
 				<br><br><p>Entre na sua conta:</p><br>
 
