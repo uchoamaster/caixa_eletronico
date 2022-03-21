@@ -1,6 +1,18 @@
 <?php 
 
 class Contas extends Conexao {
+    //Método para listar contas
+
+    public function listAccounts(){
+        $pdo = parent::get_instance();
+        $sql = "SELECT * FROM contas ORDER BY id ASC";
+        $sql = $pdo->prepare($sql);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            return $sql->fetchAll();
+        }
+    }
 
     //método para fazer login
     public function setLogged($agencia, $conta, $senha){

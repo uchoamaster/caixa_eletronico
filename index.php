@@ -2,6 +2,12 @@
 session_start();
 if(isset($_SESSION['login'])){
 
+include_once 'model/Conexao.class.php';	
+include_once 'model/Contas.class.php';	
+
+$contas = new Contas();
+
+
 
 ?>
 <!-- Template by carlos uchoa -->
@@ -93,13 +99,13 @@ if(isset($_SESSION['login'])){
 									</tr>
 								</thead>
 								<tbody>
-									
+									<?php foreach($contas->listAccounts() as $account): ?>
 									<tr class="tr">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td><?php echo $account['id']; ?></td>
+										<td><?php echo $account['titular']; ?></td>
+										<td><?php echo $account['agencia']; ?></td>
+										<td><?php echo $account['conta']; ?></td>
+										<td><?php echo $account['saldo']; ?></td>
 
 										<!-- Formulario para Transação -->
 										<td>
@@ -120,7 +126,7 @@ if(isset($_SESSION['login'])){
 										<!-- Fim Formulario -->
 
 									</tr>
-									
+									<?php endforeach; ?>
 								</tbody>
 							</table>
 						</div>
