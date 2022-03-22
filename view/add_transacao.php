@@ -108,7 +108,7 @@ $id = $_POST['id'];
 
 							<!-- Formulario JQuery -->
 
-							<form method="POST" action="" style="font-weight: bold; font-style: italic;" class="formulario">
+							<form method="POST" action="../controller/transactionController.php" style="font-weight: bold; font-style: italic;" class="formulario">
 								
 								<h4 class="text-center">
 									<strong>
