@@ -196,11 +196,15 @@ $id = $_POST['id'];
 											<td>
 												<?php echo date("d/m/Y H:m:s", strtotime($historic['data_operacao'])); ?>
 											</td>
-											
+											<?php if($historic['tipo'] == "Deposito"): ?>
 											<td style="color: green;">
-												<?php echo $historic['valor']; ?>
+											  R$	<?php echo $historic['valor']; ?>
 											</td>
-											
+											<?php else:  ?>
+											<td style="color: red;">
+											- R$	<?php echo $historic['valor']; ?>
+											</td>
+											<?php endif; ?>
 											<td>
 											<?php echo $historic['tipo']; ?>
 											</td>
