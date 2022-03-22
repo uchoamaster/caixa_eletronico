@@ -15,14 +15,14 @@ class Contas extends Conexao {
 
         if($tipo == 'Deposito'){
             //Deposito
-            $sql = "UPDATE contas WHERE SET saldo = saldo + :valor WHERE id = :id";
+            $sql = "UPDATE contas  SET saldo = saldo + :valor WHERE id = :id";
             $sql = $pdo->prepare($sql);
             $sql->bindValue(":valor", $valor);
             $sql->bindValue(":id", $_SESSION['login']);
             $sql->execute();
         }else {
             //retirada
-            $sql = "UPDATE contas WHERE SET saldo = saldo - :valor WHERE id = :id";
+            $sql = "UPDATE contas  SET saldo = saldo - :valor WHERE id = :id";
             $sql = $pdo->prepare($sql);
             $sql->bindValue(":valor", $valor);
             $sql->bindValue(":id", $_SESSION['login']);
