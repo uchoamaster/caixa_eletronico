@@ -114,6 +114,9 @@ $contas = new Contas();
 
 							<!-- Botão para Transação -->
 
+							<input type="hidden" name="id" value="<?=$account['id']?>">
+							<!-- criando esse input hidden eu consigo enviar atraves de um metodo esse id com as infos para outras paginas -->
+
 							<button class="btn btn-warning btn-xs">
 								<i class="fa fa-dollar-sign"></i>
 							</button>

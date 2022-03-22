@@ -5,6 +5,13 @@ session_start();
 
 if(isset($_SESSION['login'])) {
 
+include_once'../model/Conexao.class.php';
+include_once'../model/Contas.class.php';
+
+$contas = new Contas();
+
+$id = $_POST['id'];
+
 ?>
 
 <!-- Fim - PHP -->
@@ -58,14 +65,14 @@ if(isset($_SESSION['login'])) {
 									</tr>
 								</thead>
 								<tbody>
-									
+									<?php foreach($contas->getInfo($id) as $account_info): ?>
 									<tr class="tr">
-										<td></td>
-										<td></td>
-										<td></td>
-										<td></td>
+										<td><?php echo $account_info['id']; ?></td>
+										<td><?php echo $account_info['titular']; ?></td>
+										<td><?php echo $account_info['agencia']; ?></td>
+										<td><?php echo $account_info['conta']; ?></td>
 										<td style="text-align: center;">
-											
+										<td><?php echo $account_info['saldo']; ?></td>
 										</td>
 
 										<!-- Botões de Ações -->
@@ -85,7 +92,7 @@ if(isset($_SESSION['login'])) {
 										<!-- Fim - Form de Transacao -->
 
 									</tr>
-								
+								<?php endforeach; ?>
 								</tbody>
 							</table><hr><br><br>
 
