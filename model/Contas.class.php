@@ -14,6 +14,22 @@ class Contas extends Conexao {
         }
     }
 
+    //metodo para listar histórico
+    public function listHistoric($id){
+        $pdo = parent::get_instance();
+        $sql = "SELECT * FROM historico WHERE id_conta = :id_conta";
+        $sql = $pdo->prepare($sql);
+        $sql->bindValue(":id_conta", $id);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) {
+                return $sql->fetchAll();
+        }
+        
+    }
+
+
+
     //método para pegar informações de cada conta
 
     public function getInfo($id){

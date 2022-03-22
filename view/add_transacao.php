@@ -191,17 +191,21 @@ $id = $_POST['id'];
 										</tr>
 									</thead>
 									<tbody style="text-align: center;">
-										
+										<?php foreach($contas->listHistoric($id) as $historic): ?>
 										<tr>
-											<td></td>
-											
-											<td style="color: green;">
-												
+											<td>
+												<?php echo date("d/m/Y H:m:s", strtotime($historic['data_operacao'])); ?>
 											</td>
 											
-											<td></td>
+											<td style="color: green;">
+												<?php echo $historic['valor']; ?>
+											</td>
+											
+											<td>
+											<?php echo $historic['tipo']; ?>
+											</td>
 										</tr>
-										
+										<?php endforeach; ?>
 									</tbody>
 								</table>
 
