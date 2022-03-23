@@ -21,7 +21,7 @@ class Contas extends Conexao {
             $sql->bindValue(":id", $_SESSION['login']);
             $sql->execute();
         }else {
-            //retirada
+            //Retirada
             $sql = "UPDATE contas  SET saldo = saldo - :valor WHERE id = :id";
             $sql = $pdo->prepare($sql);
             $sql->bindValue(":valor", $valor);
@@ -29,8 +29,6 @@ class Contas extends Conexao {
             $sql->execute();
         }
     }
-
-
 
     //Método para listar contas
     public function listAccounts(){
@@ -58,8 +56,6 @@ class Contas extends Conexao {
         
     }
 
-
-
     //método para pegar informações de cada conta
 
     public function getInfo($id){
@@ -73,9 +69,7 @@ class Contas extends Conexao {
             return $sql->fetchAll();
         }
     }
-
-
-
+    
     //método para fazer login
     public function setLogged($agencia, $conta, $senha){
         $pdo = parent::get_instance();
