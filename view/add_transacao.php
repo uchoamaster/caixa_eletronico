@@ -13,11 +13,7 @@ $contas = new Contas();
 $id = $_POST['id'];
 
 ?>
-
 <!-- Fim - PHP -->
-
-
-
 <!-- HTML -Incluindo Arquivos CSS3, Bootstrap 4, etc -->
 		<!DOCTYPE html>
 		<meta charset="UTF-8">
@@ -34,20 +30,14 @@ $id = $_POST['id'];
 		<!-- Fontawesome 5.0-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <!-- Fim - Arquivos -->
-
-
-
 <!-- Iniciando Tabela -->
-
 <div class="content p-1">
                 <div class="list-group-item" style="background-color: #eaeef3">
                     
                         <div class="mr-auto p-2">
                             <h2 class="text-center"> Banco 123 <i class="fa fa-money-check-alt"></i></h2><br>
                         </div>
-
                         <!-- Iniciando a Tabela -->
-
                         <div class="table-responsive">
 							<table class="table table-hover">
 								<thead class="thead">
@@ -85,31 +75,15 @@ $id = $_POST['id'];
 							<button class="btn btn-warning btn-lg form_jquery">
 								<i class="fa fa-dollar-sign"></i>
 							</button>
-
 										</td>
-
-
 										<!-- Fim - Form de Transacao -->
-
 									</tr>
 								<?php endforeach; ?>
 								</tbody>
 							</table><hr><br><br>
-
 							<!-- Fim - Tabela -->
-
-
-
-
-
-
-
-
-
 							<!-- Formulario JQuery -->
-
 							<form method="POST" action="../controller/transactionController.php" style="font-weight: bold; font-style: italic;" class="formulario">
-								
 								<h4 class="text-center">
 									<strong>
 										Efetue a Transação <i class="fa fa-handshake"></i>
@@ -144,8 +118,6 @@ $id = $_POST['id'];
 
 										<div class="col-md-4" style="clear: both;"></div>
 
-										
-
 										<div class="col-md-4">
 											<br><button class="btn btn-primary btn-block">
 												Efetuar Transação <i class="fa fa-handshake"></i>
@@ -153,9 +125,6 @@ $id = $_POST['id'];
 										</div>
 
 										<div class="col-md-4" style="clear: both;"></div>
-
-										
-
 
 									</div>
 								</div>
